@@ -1,0 +1,27 @@
+Quick hack to parse the VyOS mirror list from http://vyos.net/wiki/Mirrors, parse it, and display the status.
+
+Usage:
+ ./check <version number>
+
+Example:
+ ./check 1.1.0
+ 200 http://packages.vyos.net/iso/release/1.1.0/
+ 200 http://mirror.symnds.com/software/vyos/iso/release/1.1.0/
+ 200 http://vyos.sliqua.com//iso/release/1.1.0/
+ 200 http://0.us.mirrors.vyos.net/vyos/iso/release/1.1.0/
+ 200 http://mirror.zenflow.net/vyos//iso/release/1.1.0/
+ 200 http://mirror.as62588.net/vyos//iso/release/1.1.0/
+ 200 http://mirrors.maine.edu/vyos/iso/release/1.1.0/
+ 200 http://ftp.tsukuba.wide.ad.jp/software/vyos//iso/release/1.1.0/
+ 200 http://0.se.mirrors.vyos.net/iso/release/1.1.0/
+ 000 http://apt-mirror.koding.com/vyos/iso/release/1.1.0/
+ 404 http://mirrors.nixus.es/vyos/iso/release/1.1.0/
+ 200 http://0.bg.mirrors.vyos.net/iso/release/1.1.0/
+ 200 http://0.ua.mirrors.vyos.net/iso/release/1.1.0/
+ 200 http://mirrors.mediactivity.net/vyos//iso/release/1.1.0/
+ 200 http://vyos.uv.es/iso/release/1.1.0/
+ 200 http://0.de.mirrors.vyos.net/iso/release/1.1.0/
+ 200 http://mirror.easyspeedy.com/vyos//iso/release/1.1.0/
+ 404 http://ftp.qb.com.au/pub/vyos//iso/release/1.1.0/
+
+Anything other than a 200 is bad.
