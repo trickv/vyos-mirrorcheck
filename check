@@ -8,11 +8,5 @@ fi
 version=$1
 
 for a in `cat mirror-list`; do
-    echo $a
-    curl -s $a/iso/release/ | fgrep $version &> /dev/null
-    if [ $? -eq 0 ]; then
-        echo "OK"
-    else
-        echo "Missing $version release"
-    fi
+    curl -sL -w "%{http_code} %{url_effective}\\n" $a/iso/release/$version/ -o /dev/null
 done
