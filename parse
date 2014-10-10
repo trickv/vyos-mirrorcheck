@@ -1,1 +1,1 @@
-cat source | fgrep http:// | egrep "^<td> <a rel=\"nofollow\" class=\"external" | cut -d= -f4- | cut -d\" -f2 > mirror-list
+cat source | fgrep http:// | egrep "^<td> <a rel=\"nofollow\" class=\"external free" | cut -d= -f4- | cut -d\" -f2 > mirror-list
