@@ -7,6 +7,9 @@ fi
 
 version=$1
 
+./_check
+./_parse
+
 for a in `cat mirror-list`; do
     curl -sL -w "%{http_code} %{url_effective}\\n" $a/iso/release/$version/ -o /dev/null
 done
